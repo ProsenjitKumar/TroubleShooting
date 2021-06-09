@@ -1,0 +1,13 @@
+netstat -ano | findstr :80
+
+
+taskkill /pid 4 /F
+taskkill /f /s localhost /pid 4
+
+netstat -ab
+
+netstat -nao | find ":80"
+
+NET Stop HTTP
+
+sc config http start= disabled
